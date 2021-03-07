@@ -1,0 +1,20 @@
+header.header
+	div.container
+		div.header__row-helper.row
+			div.header__col-helper.col-auto
+				div.header__text
+					h1.header__text-welcome= welcomeText
+					nav.header__nav
+						menu.header__menu.row
+							each key,value in mainMenu
+								li.header__menu-item.col-auto
+									a.header__menu-link(href=key)= value
+	div.header__logo
+	ul.header__socials.row
+		each key,value in socialLinks
+			li.header__social-item.col
+				a.header__social-link(href=key class="header__social-link_" + value)
+
+
+
+

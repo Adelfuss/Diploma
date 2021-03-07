@@ -1,0 +1,114 @@
+.footer {
+	background-color: #101010;
+	padding-top: $footerPaddingTop;
+
+	&__logo {
+		@include font(#454546,4.5,('Open Sans', Arial sans-serif));
+		line-height: 0.7;
+		margin-bottom: $footerDefaultMargin;
+	}
+
+	&__description {
+		@include font(#454546,1,('Open Sans', Arial sans-serif));
+		margin-bottom: $footerDefaultMargin;
+	}
+
+	&__socials-item {
+		float: left;
+		margin-right: 17px;
+	}
+
+	&__socials-item:last-child {
+		margin-right: 0;
+	}
+
+	&__socials-link {
+		display: block;
+		@include complexWidthHeight($footerSocialLinksSizes,$footerSocialLinksSizes);
+		@include background('../../img/footer_socials/twitter.png',cover,center);
+	}
+
+	@each $key,$value in $socialsFooter {
+		&__socials-link_#{$key} {
+			@include background($value,contain,center);
+		}
+	}
+
+	&__info-header {
+		@include textHandler(uppercase);
+		@include font(#FFFFFF,1,('Open Sans', Arial sans-serif),bold);
+		@include contentAttributes(('pb': $footerDefaultMargin), ('bb': 1px solid #454546), ('mb': $footerDefaultMargin));
+	}
+
+	&__helper.row {
+		justify-content: space-between;
+	}
+
+	&__menu-link {
+		@include textHandler(uppercase);
+		@include font(#454546,1,('Open Sans', Arial sans-serif),bold);
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__menu-link:nth-child(even) {
+		text-align: right;
+	}
+
+	&__tags-header {
+		@extend .footer__info-header;
+	}
+
+	&__tags-item {
+		display: inline-block;
+		@include contentAttributes(('mb': 10px, 'mr': 10px));
+		padding: 5px 10px;
+		border: 1px solid #454546;
+		border-radius: 15px;
+	}
+
+	&__tags-item:last-child {
+		@include contentAttributes(('mb': 0, 'mr': 0));
+	}
+
+	&__tags-link {
+		@include textHandler(uppercase);
+		@include font(#454546,1,('Open Sans', Arial sans-serif),bold);
+	}
+
+	&__clients-header {
+		@extend .footer__info-header;
+	}
+
+	&__copyright {
+		text-align: center;
+		@include font(white,1,('Open Sans', Arial sans-serif),bold);
+		margin-top:15px;
+	}
+}
+
+
+.form {
+
+	&__name {
+		width: 100%;
+		background-color: #19181a;
+		padding: 10px;
+		margin-bottom: 30px;
+	}
+
+	&__name::placeholder {
+		@include font(white,1,('Open Sans', Arial sans-serif),300);
+	}
+
+	&__email {
+		 @extend .form__name;
+	}
+
+	&__submit {
+		@include font(#000000,1,('Open Sans', Arial sans-serif),600);
+		@extend .form__name;
+		margin-bottom: 0;
+		background-color: white;
+	}
+}

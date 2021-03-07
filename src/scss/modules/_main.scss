@@ -1,0 +1,77 @@
+.main {
+	margin-bottom: $mainBottom;
+}
+
+.search {
+	text-align: right;
+	margin-top: 25px;
+
+	&__box {
+		display: inline-block;
+		@include complexWidthHeight($searchBoxSizes,$searchBoxSizes);
+		@include background('../../img/search.png',cover,center);
+	}
+}
+
+.aside {
+	&__menu-item {
+		padding-bottom: 15px;
+	}
+
+	&__menu-item:last-child {
+		padding-bottom: 0;
+	}
+
+	&__menu-link {
+		@include textHandler(none);
+		@include font(#11659A !important,1,('Open Sans', Arial sans-serif));
+		transition: padding-left 0.2s;
+	}
+
+	&__menu-link:hover{
+		padding-left: 15px;
+	}
+
+	&__menu-link:hover &__menu-link-decoration {
+		display: inline-block;
+	}
+
+	&__menu-link-decoration {
+		display: none;
+		@include complexWidthHeight($width: 7px, $height: 14px);
+		@include background('../../img/menu_triangle.png',cover,center);
+	}
+}
+
+.goods-section {
+	&__item-img {
+		max-width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__helper.row {
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		@include textHandler(uppercase);
+		@include font(#000000,1,('Open Sans', Arial sans-serif));
+	}
+
+	&__item-like {
+		padding: 0;
+		@include complexWidthHeight($likeSizes,$likeSizes);
+		@include background('../../img/heart.png',cover,center);
+	}
+
+	&__small-text {
+		@include font(#000000,1,('Open Sans', Arial sans-serif));
+		margin-bottom: 20px;
+	}
+
+	&__item-price {
+		@include font(#17718F,1.5,('Open Sans', Arial sans-serif));
+	}
+}

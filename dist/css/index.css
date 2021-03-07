@@ -1,0 +1,392 @@
+menu,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header {
+  position: relative;
+  background-image: url("../img/intro_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header__row-helper.row {
+  height: 100vh;
+}
+
+.header__col-helper.col-auto {
+  margin: auto;
+}
+
+.header__text-welcome {
+  margin-bottom: 100px;
+  color: #FFFFFF;
+  font-size: 72px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.header__menu.row {
+  justify-content: space-between;
+}
+
+.header__menu-link {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__logo {
+  position: absolute;
+  top: 2.77778%;
+  left: 19.53125%;
+  width: 93px;
+  height: 52px;
+  background-image: url("../img/logo/BL.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__socials {
+  position: absolute;
+  bottom: 2.77778%;
+  left: 10.41667%;
+}
+
+.header__social-link {
+  width: 32px;
+  height: 32px;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.header__social-link_telegram {
+  background-image: url("../img/social_icons/telegram.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__social-link_facebook {
+  background-image: url("../img/social_icons/facebook.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__social-link_instagram {
+  background-image: url("../img/social_icons/instagram.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  margin-bottom: 200px;
+}
+
+.search {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.search__box {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/search.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aside__menu-item {
+  padding-bottom: 15px;
+}
+
+.aside__menu-item:last-child {
+  padding-bottom: 0;
+}
+
+.aside__menu-link {
+  text-transform: none;
+  text-decoration: none;
+  color: #11659A !important;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  transition: padding-left 0.2s;
+}
+
+.aside__menu-link:hover {
+  padding-left: 15px;
+}
+
+.aside__menu-link:hover .aside__menu-link-decoration {
+  display: inline-block;
+}
+
+.aside__menu-link-decoration {
+  display: none;
+  width: 7px;
+  height: 14px;
+  background-image: url("../img/menu_triangle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.goods-section__item-img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.goods-section__helper.row {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.goods-section__text {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.goods-section__item-like {
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/heart.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.goods-section__small-text {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.goods-section__item-price {
+  color: #17718F;
+  font-size: 24px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.footer {
+  background-color: #101010;
+  padding-top: 100px;
+}
+
+.footer__logo {
+  color: #454546;
+  font-size: 72px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 0.7;
+  margin-bottom: 30px;
+}
+
+.footer__description {
+  color: #454546;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.footer__socials-item {
+  float: left;
+  margin-right: 17px;
+}
+
+.footer__socials-item:last-child {
+  margin-right: 0;
+}
+
+.footer__socials-link {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/footer_socials/twitter.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__socials-link_twitter {
+  background-image: url("../img/footer_socials/twitter.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__socials-link_instagram {
+  background-image: url("../img/footer_socials/instagram-sketched.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__socials-link_whatsapp {
+  background-image: url("../img/footer_socials/whatsapp.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__socials-link_facebook {
+  background-image: url("../img/footer_socials/facebook.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__socials-link_telegram {
+  background-image: url("../img/footer_socials/telegram.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__info-header,
+.footer__tags-header,
+.footer__clients-header {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #454546;
+  margin-bottom: 30px;
+}
+
+.footer__helper.row {
+  justify-content: space-between;
+}
+
+.footer__menu-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #454546;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer__menu-link:nth-child(even) {
+  text-align: right;
+}
+
+.footer__tags-item {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #454546;
+  border-radius: 15px;
+}
+
+.footer__tags-item:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.footer__tags-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #454546;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.footer__copyright {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.form__name,
+.form__email,
+.form__submit {
+  width: 100%;
+  background-color: #19181a;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.form__name::placeholder,
+.form__email::placeholder,
+.form__submit::placeholder {
+  color: white;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.form__submit {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Open Sans", Arial sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0;
+  background-color: white;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,20 @@
+menu, ul {
+	@include allIndentsNull();
+	list-style-type: none;
+}
+
+li {
+	@include allIndentsNull();
+}
+
+input {
+	outline:none;
+	border: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+

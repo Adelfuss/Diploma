@@ -1,0 +1,53 @@
+.header {
+	position: relative;
+	@include background('../../img/intro_img.jpg',cover, center);
+	height: $fullViewportHeight;
+
+	//in role of helper class
+	&__row-helper.row {
+		height: $fullViewportHeight;
+	}
+
+	&__col-helper.col-auto {
+		margin: auto;
+	}
+
+	&__text-welcome {
+		margin-bottom: $textWelcomeMargin;
+		@include font(#FFFFFF,4.5,('Open Sans', Arial sans-serif));
+	}
+
+	//in role of helper class
+	&__menu.row {
+		justify-content: space-between;
+	}
+
+	&__menu-link {
+		@include font(#FFFFFF,1.5,('Open Sans', Arial sans-serif));
+		@include textHandler(uppercase);
+	}
+
+	&__logo {
+		@include absolutePosition((top:30px, left:375px));
+		width: 93px;
+		height: 52px;
+		@include background('../../img/logo/BL.png',cover,center);
+	}
+
+	&__socials {
+		@include absolutePosition((bottom: 30px, left: 200px));
+	}
+
+	&__social-link {
+		width: 32px;
+		height: 32px;
+		@include background(null,cover,center);
+		display: block;
+	}
+
+	@each $key,$value in $socialsIdentificators {
+		&__social-link_#{$key} {
+			@include background($value,cover,center);
+		}
+	}
+}

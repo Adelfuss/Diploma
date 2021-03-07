@@ -1,0 +1,35 @@
+footer.footer
+	div.container
+		div.row
+			div.col-3
+				div.footer__logo BL
+				div.footer__description
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.	
+				ul.footer__socials.clearfix
+					each key,value in footerSocials
+						li.footer__socials-item
+							a.footer__socials-link(href=key class="footer__socials-link_" + value)
+			div.col-3
+				h3.footer__info-header Information
+				div.footer__helper.row
+					each key,value in footerMenu
+						a.footer__menu-link.col-6(href=key)= value
+			div.col-3
+				h3.footer__tags-header Tags
+				ul.footer__tags
+					- var tagsCount = 0;
+					while (tagsCount < 8)
+						- tagsCount++;
+						li.footer__tags-item
+							a.footer__tags-link Skirt
+			div.col-3
+				div.footer__feedback
+					h3.footer__clients-header New Clients
+					form.form
+						input.form__name(type="text" placeholder="Your name")
+						input.form__email(type="email" placeholder="Email address")
+						input.form__submit(type="submit" value="Subscribe now")
+		div.footer__copyright Made by Bohdan Lyhoshapko. All rights are reserved &reg;
+

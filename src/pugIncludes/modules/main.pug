@@ -1,0 +1,28 @@
+main.main
+	div.container
+		div.search
+			div.search__box
+		div.row
+			aside.aside.col-4
+				nav.aside__nav
+					menu.aside__menu
+						- var i = 1;
+						while (i < 10)
+							li.aside__menu-item
+								a.aside__menu-link(href="/") Category#{i++}
+									div.aside__menu-link-decoration
+
+			section.goods-section.col-8.row
+				-var goodsCount = 1;
+				while (goodsCount < 10)
+					- goodsCount++;
+					div.col-6
+						img.goods-section__item-img(src="../../img/goods/370.jpg" data-local-src="img/goods/370.jpg")
+						div.goods-section__helper.row
+							div.goods-section__text.col-auto Minimal Sweater
+							div.goods-section__item-like.col-auto
+						div.goods-section__small-text Minimal sweater
+						div.goods-section__item-price 120$
+
+
+

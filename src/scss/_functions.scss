@@ -1,0 +1,38 @@
+@function getFontSize($multiplicator) {
+	@return $multiplicator * $fontBase;
+}
+
+@function setPercentPosition($key, $value) {
+	$position: null;
+	@if $key == 'top' or $key == 'bottom' {
+		$position: ($value / $layoutHeight) * 100%;
+	}
+	@if $key == 'left' or $key == 'right' {
+		$position: ($value / $layoutWidth) * 100%;
+	}
+	@return $position;
+}
+
+@function getFullSideName($abbr) {
+	$fullNameMap: ('l': left, 'r': 'right', 't': top, 'b': bottom);
+	@return map-get($fullNameMap,$abbr);
+}
+
+@function returnFullProperyName($abbr) {
+	$properyFirstPart: null;
+	@debug $abbr;
+	$propertyAttr: str-slice($abbr,0,1);
+	@debug $propertyAttr;
+	@if $propertyAttr == 'p' {
+		$properyFirstPart: 'padding';
+	} @else if $propertyAttr == 'b' {
+		$properyFirstPart : 'border';
+	} @else if $propertyAttr == 'm' {
+		$properyFirstPart : 'margin';
+	}
+	@debug $properyFirstPart;
+	$propertySecondPart: getFullSideName(str-slice($abbr,2));
+	@debug $propertySecondPart;
+	@return $properyFirstPart + '-' + $propertySecondPart;
+}
+

@@ -1,0 +1,51 @@
+@mixin background($url, $size, $position, $color:#FFFFFF, $repeat: no-repeat) {
+	background: {
+		image: url($url);
+		size: $size;
+		position: $position;
+		repeat: $repeat;
+	}
+}
+
+@mixin font($color, $size, $family, $weight: normal,$style: normal) {
+	color: $color;
+	$size: getFontSize($size);
+	font: {
+		size: $size;
+		family: $family;
+		style: $style;
+		weight: $weight;
+	}
+}
+
+@mixin textHandler($transform ,$decoration: none) {
+	text: {
+		transform: $transform;
+		decoration: $decoration;
+	}
+}
+
+@mixin allIndentsNull() {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin absolutePosition($map) {
+	position: absolute;
+	@each $key,$value in $map {
+		#{$key}: setPercentPosition($key,$value);
+	}
+}
+
+@mixin contentAttributes($paddings, $borders: (), $margins: ()) {
+    $compisiteMap: map-merge(map-merge($paddings,$borders),$margins);
+	@each $key,$value in $compisiteMap {
+		$fullProperyName: returnFullProperyName($key);
+		#{$fullProperyName}: $value;
+	}
+}
+
+@mixin complexWidthHeight($width: 100%, $height: 100%) {
+	width: $width;
+	height: $height;
+}

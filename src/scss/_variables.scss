@@ -1,0 +1,26 @@
+$fullViewportHeight: 100vh;
+$textWelcomeMargin: 100px;
+$fontBase: 16px;
+$layoutWidth: 1920px;
+$layoutHeight: 1080px;
+$socialIconsPathes: '../../img/social_icons/';
+$socialsFooter: '../../img/footer_socials/';
+$socialsIdentificators: (
+	telegram: '#{$socialIconsPathes}telegram.png',
+	facebook: '#{$socialIconsPathes}facebook.png',
+	instagram: '#{$socialIconsPathes}instagram.png'
+);
+$mainBottom: 200px;
+$searchBoxSizes: 32px;
+$likeSizes: 16px;
+$footerSocialLinksSizes: 16px;
+$footerDefaultMargin: 30px;
+$socialsFooter: 
+(
+	twitter: '#{$socialsFooter}twitter.png',
+	instagram: '#{$socialsFooter}instagram-sketched.png',
+	whatsapp: '#{$socialsFooter}whatsapp.png',
+	facebook: '#{$socialsFooter}facebook.png',
+	telegram: '#{$socialsFooter}telegram.png'
+);
+$footerPaddingTop: 100px;
